@@ -1,0 +1,23 @@
+[package]
+name = "demo-sube"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = "0.4.3"
+dioxus-logger = "0.4.1"
+log = "0.4.20"
+sube = { path = "../virto-sdk/sube", default-features = false, features = ["js"]}
+libwallet = { path = "../virto-sdk/libwallet"}
+codec = { version = "=3.1.2", package = "parity-scale-codec", default-features = false }
+dioxus-web = "0.4.3"
+wasm-bindgen = "0.2.92"
+rand_core = "0.6.4"
+serde = "1.0.197"
+serde_json = "1.0.114"
+hex = "0.4.3"
+
+[patch.crates-io]
+cookie = { git = "https://github.com/S0c5/cookie-rs.git" }
